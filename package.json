@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "heroku": "^7.53.1",
+    "mongoose": "^5.12.9"
+  }
+}
