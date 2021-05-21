@@ -21,7 +21,7 @@ app.use('/tgsm2z', tgsMZRoute);
 
 // connect to mongodb atlas
 mongoose.connect(
-    process.env.MONGO_URL2, 
+    process.env.MONGO_URL1, 
     {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
     console.log("connected to mongodb atlas");
