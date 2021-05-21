@@ -18,7 +18,7 @@ app.use('/home', homeRoute);
 app.use('/tgsa2m', tgsAMRoute);
 app.use('/tgsm2z', tgsMZRoute);
 
-
+/* 
 // connect to mongodb atlas
 mongoose.connect(
     process.env.MONGO_URL1, 
@@ -45,7 +45,7 @@ mongoose.connect(
 .catch((error) => {
     console.log("Error connecting to mongodb atlas", error);
 })
-
+ */
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
