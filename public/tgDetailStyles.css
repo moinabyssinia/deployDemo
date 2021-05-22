@@ -1,0 +1,21 @@
+h2 {
+    color: white;
+    background-color: rgb(24, 26, 21);
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+td {
+    padding: 5px 10px;
+}
+
+table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

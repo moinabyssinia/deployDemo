@@ -8,8 +8,11 @@
 </head>
 <body>
     <h1>GSSR - Tide Gauges( <%= tgTitle %> )  </h1>
+    <h3><%= tgNames.length %> tide gauges found </h3>
+    <% let ii = 1; %> 
     <% for (let tg of tgNames.sort()) { %>
-        <p><%= tg %> </p>
+        <p><%= ii %>. <a href="/tgDetail/<%= tg %> "><%= tg %> </a> </p>
+        <% ii++ %> 
     <% } %> 
 </body>
 </html>

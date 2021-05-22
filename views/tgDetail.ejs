@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/tgDetailStyles.css">
+    <title>Tide Gauge Detail</title>
+</head>
+<body>
+    <h2> <%= data[0].name %> </h2>
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><%= data[0].name %></td>
+        </tr>
+
+        <tr>
+            <td>Longitude</td>
+            <td><%= data[0].lon %></td>
+        </tr>
+
+        <tr>
+            <td>Latitude</td>
+            <td><%= data[0].lat %></td>
+        </tr>
+
+        <tr>
+            <td>Country</td>
+            <td><%= data[0].country %></td>
+        </tr>
+
+        <tr>
+            <td>Observed Daily Max Surge</td>
+            <td><a href="" target="_blank">Obs Surge</a></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

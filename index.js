@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const tgsAMRoute = require('./routes/tgs_AM'); // requring a route
 const tgsMZRoute = require('./routes/tgs_MZ'); // requring a route
 const homeRoute = require('./routes/home'); 
+const tgDetailRoute = require('./routes/tgDetail'); 
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,9 +15,12 @@ require('dotenv').config();
 
 
 // routes go here
+app.use(express.static("public")); // to locate css and other files
+
 app.use('/home', homeRoute);
 app.use('/tgsa2m', tgsAMRoute);
 app.use('/tgsm2z', tgsMZRoute);
+app.use('/tgDetail', tgDetailRoute);
 
 
 // connect to mongodb atlas
