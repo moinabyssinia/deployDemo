@@ -10,7 +10,7 @@ router.get('/:tg', (req, res) => {
     // connect to gssrCountries
 
     mongoose.connection.close(); // close previous connections
-
+    
     mongoose.connect(
         process.env.MONGO_URL3, 
         {useNewUrlParser: true, useUnifiedTopology: true})
