@@ -6,6 +6,7 @@ const tgsAMRoute = require('./routes/tgs_AM'); // requring a route
 const tgsMZRoute = require('./routes/tgs_MZ'); // requring a route
 const homeRoute = require('./routes/home'); 
 const tgDetailRoute = require('./routes/tgDetail'); 
+const obsSurgeRoute = require('./routes/obsSurge'); 
 
 const PORT = process.env.PORT || 3000;
 
@@ -21,6 +22,7 @@ app.use('/home', homeRoute);
 app.use('/tgsa2m', tgsAMRoute);
 app.use('/tgsm2z', tgsMZRoute);
 app.use('/tgDetail', tgDetailRoute);
+app.use('/tgDetail/obs_surge', obsSurgeRoute);
 
 
 // connect to mongodb atlas

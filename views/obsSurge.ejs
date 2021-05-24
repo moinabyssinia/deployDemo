@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/obsSurgeStyle.css">
+    <title><%= tgName %> </title>
+</head>
+<body>
+    <h2><%= tgName %> </h2>
+    <h3>Observation - Daily Maximum Surge</h3>
+    <table>
+        <tr>
+            <td class="header"><strong>Date</strong></td>
+            <td class="header"><strong>Surge (m)</strong></td>
+        </tr>
+
+        <% for (let item of data) { %> 
+            <% if (item.date !== 'date') { %> 
+                <tr>
+                    <td><%= item.date %> </td>
+                    <td><%= Math.floor(item.surge*10000)/10000 %> </td>
+                </tr>
+            <% } %> 
+
+        <% } %> 
+
+    </table>
+</body>
+</html>
