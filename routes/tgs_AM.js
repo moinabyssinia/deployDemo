@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
+
 // view a list of all tide gauges
 router.get('/', (req, res) => {
 
@@ -25,6 +26,9 @@ router.get('/', (req, res) => {
             res.render('alltgs', { tgNames, tgTitle });
             mongoose.connection.close();
         });
+    })
+    .catch(error => {
+        console.log("error connecting to gssrDB1", error);
     })
 })
 

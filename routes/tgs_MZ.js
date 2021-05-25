@@ -27,6 +27,9 @@ router.get('/', (req, res) => {
             mongoose.connection.close();
         });
     })
+    .catch(error => {
+        console.log("error connecting to gssrDB2", error);
+    })
 })
 
 module.exports = router;

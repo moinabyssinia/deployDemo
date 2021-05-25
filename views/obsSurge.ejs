@@ -10,6 +10,7 @@
 <body>
     <h2><%= tgName %> </h2>
     <h3>Observation - Daily Maximum Surge</h3>
+    <button onclick="exportTableToCSV('<%= tgName %>.csv')">Download CSV</button>
     <table>
         <tr>
             <td class="header"><strong>Date</strong></td>
@@ -25,6 +26,8 @@
             <% } %> 
 
         <% } %> 
+
+        <script src = "/scripts/obsSurgeScript.js"></script>
 
     </table>
 </body>
