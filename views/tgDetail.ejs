@@ -32,8 +32,13 @@
         </tr>
 
         <tr>
+            <td>Location</td>
+            <td><a href="http://maps.google.com/maps?z=12&t=k&q=<%= data[0].lat %> ,<%= data[0].lon %>" target="_blank">view map</a></td>
+        </tr>
+
+        <tr>
             <td>Observed Daily Max Surge</td>
-            <td><a href="/tgDetail/obs_surge/<%= data[0].name %>" target="_blank">Obs Surge</a></td>
+            <td><a href="/tgDetail/obs_surge/<%= data[0].name %>" target="_blank">obs surge</a></td>
         </tr>
 
     </table>
