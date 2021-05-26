@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
             const tgNames = [];
             const tgTitle = "M-Z";
             for (let tgName of names){
-                console.log(tgName.name); // [{ name: 'dbname.myCollection' }]
+                // console.log(tgName.name); // [{ name: 'dbname.myCollection' }]
                 tgNames.push(tgName.name)
             }
 

@@ -25,33 +25,6 @@ app.use('/tgDetail', tgDetailRoute);
 app.use('/tgDetail/obs_surge', obsSurgeRoute);
 
 
-// // connect to mongodb atlas
-// mongoose.connect(
-//     process.env.MONGO_URL1, 
-//     {useNewUrlParser: true, useUnifiedTopology: true})
-// .then(() => {
-//     console.log("connected to mongodb atlas");
-
-//     tgName = 'akyab__sittwe__907a_myanmar'
-
-//     mongoose.connection.db.collection(tgName, function (err, collection) {
-
-//         // sort the collection with date - date : 1 (ascending)
-//         collection.find({}).sort({date : 1}).toArray(function(err, data){
-//         // console.log(data); // it will print your collection data
-//         const timeSeries = data;
-//         // console.log(timeSeries[0].date);
-//         // res.render('obsSurge', {timeSeries, tgName});
-//         mongoose.connection.close();
-//         });
-//     });
-
-
-// })
-// .catch((error) => {
-//     console.log("Error connecting to mongodb atlas", error);
-// })
-
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
