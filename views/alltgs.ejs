@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Tide Gauges</title>
-</head>
-<body>
-    <h1>GSSR - Tide Gauges( <%= tgTitle %> )  </h1>
+<% layout('layouts/boilerplate') %> 
 
-    <button><a href="/home" style="text-decoration: none;">Back</a></button>
-    
-    <h3><%= tgNames.length %> tide gauges found </h3>
-    <% let ii = 1; %> 
-    <% for (let tg of tgNames.sort()) { %>
-        <p><%= ii %>. <a href="/tgDetail/<%= tg %> "><%= tg %> </a> </p>
-        <% ii++ %> 
-    <% } %> 
-</body>
-</html>
+<h1>Tide Gauges ( <%= tgTitle %> ) -
+     <%= tgNames.length %> tide gauges found</h1>
+
+<!-- <button><a href="/home" style="text-decoration: none;">Back</a></button> -->
+
+<% let ii = 1; %> 
+<% for (let tg of tgNames.sort()) { %>
+    <p><%= ii %>. <a href="/tgDetail/<%= tg %> "><%= tg %> </a> </p>
+    <% ii++ %> 
+<% } %> 

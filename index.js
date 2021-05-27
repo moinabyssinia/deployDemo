@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
+const ejsMate = require('ejs-mate');
 const tgsAMRoute = require('./routes/tgs_AM'); // requring a route
 const tgsMZRoute = require('./routes/tgs_MZ'); // requring a route
 const homeRoute = require('./routes/home'); 
@@ -25,7 +26,7 @@ app.use('/tgDetail', tgDetailRoute);
 app.use('/tgDetail/obs_surge', obsSurgeRoute);
 
 
-
+app.engine('ejs', ejsMate); 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
