@@ -35,12 +35,15 @@
 
     <title>GSSRDB</title>
 </head>
-<body>
 
+<!-- to make the footer to the bottom -->
+<body class="d-flex flex-column vh-100">
+            
+    <!-- inserting navbar -->
+    <%- include('../partials/navbar') %> 
 
     <main class="container">
-        <!-- inserting navbar -->
-        <%- include('../partials/navbar') %> 
+
 
         <!-- adding progress bar -->
         <div id="_progress"></div>
@@ -51,7 +54,11 @@
         <a class="top-link hide" href="" id="js-top">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
         </a>
+
     </main>
+
+    <!-- inserting footer -->
+    <%- include('../partials/footer') %> 
 
 
 
