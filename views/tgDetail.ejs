@@ -1,7 +1,15 @@
 <% layout('layouts/boilerplate') %> 
 
+<div class="top-element">
+    <h2> <%= data[0].name %> </h2>
 
-<h2> <%= data[0].name %> </h2>
+    <form action="/search" method="get">
+        <label for="name">Tide Gauge Name</label>
+        <input type="text" name="name" id = "name" placeholder="eg. cuxhaven">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
 
 <!-- <button><a href="/home" style="text-decoration: none;">Home</a></button> -->
 

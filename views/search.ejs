@@ -1,0 +1,9 @@
+<% layout('layouts/boilerplate') %> 
+
+<h1><strong>Your Search Results</strong></h1>
+<h3><strong><%= tgNames.length %></strong> tide gauges found</h3>
+
+<br>
+<% for (let tg of tgNames.sort()) { %> 
+    <p><a href="/tgDetail/<%= tg %> "><%= tg %> </a></p> 
+<% } %> 
