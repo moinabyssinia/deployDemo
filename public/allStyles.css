@@ -193,3 +193,12 @@ hr:after {
      padding-left: 10px;
  }
  
+ /* twcrcpt styles */
+ .heading {
+     margin-bottom: 1.5rem;
+ }
+
+ .cpt-image {
+    width: 100%;
+    height: auto;
+ }

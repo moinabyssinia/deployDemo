@@ -9,6 +9,9 @@ const homeRoute = require('./routes/home');
 const tgDetailRoute = require('./routes/tgDetail'); 
 const obsSurgeRoute = require('./routes/obsSurge'); 
 const searchTGRoute = require('./routes/searchTG'); 
+const twcrCptRoute = require('./routes/twcrCpt'); 
+const twcrCptDetailRoute = require('./routes/twcrCptDetail'); 
+const twcrCptDisplayRoute = require('./routes/twcrCptDisplay'); 
 
 const PORT = process.env.PORT || 3000;
 
@@ -26,6 +29,9 @@ app.use('/tgsm2z', tgsMZRoute);
 app.use('/tgDetail', tgDetailRoute);
 app.use('/tgDetail/obs_surge', obsSurgeRoute);
 app.use('/search', searchTGRoute);
+app.use('/twcrcpt', twcrCptRoute);
+app.use('/twcrcpt/twcr', twcrCptDetailRoute);
+app.use('/cptplot', twcrCptDisplayRoute);
 
 
 app.engine('ejs', ejsMate); 

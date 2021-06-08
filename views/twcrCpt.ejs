@@ -1,0 +1,16 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="heading">
+    <h1>Changepoints for 20-CR Surge Reconstructions</h1>
+
+    <h5><strong><%= tgNames.length %></strong> tide gauges found </h5>
+</div>
+
+
+<% for (let tg of tgNames.sort()) { %> 
+
+    <ul>
+        <li><a href="/twcrcpt/twcr/<%= tg.split('.csv')[0] %> "><%= tg.split('.csv')[0] %> </li></a> 
+    </ul>
+
+<% } %> 
