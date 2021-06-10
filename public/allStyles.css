@@ -228,4 +228,5 @@ hr:after {
  .cpt-image {
     width: 100%;
     height: auto;
+    margin-top: 15px;
  }

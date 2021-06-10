@@ -16,16 +16,16 @@ router.get('/:tgName', (req, res) => {
         process.env.MONGO_URL4, 
         {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
-        console.log("connected to twcrcpt");
+        console.log("connected to changepoint");
 
         // just read one collection
-        mongoose.connection.db.collection("twcrCpt", function(err, collection){
+        mongoose.connection.db.collection("twcrEra20cMergedVI", function(err, collection){
             collection.find({tg : tg.tgName+".csv"}).sort({tg : 1}).toArray( function(err, data) {
-                console.log(data);
+                // console.log(data);
 
                 const cptUrl = process.env.twcrCptUrl;
 
-                res.render('twcrCptDetail', { data, cptUrl });
+                res.render('cptDetail', { data, cptUrl });
             })
 
             

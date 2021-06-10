@@ -11,10 +11,10 @@ router.get('/', (req, res) => {
         process.env.MONGO_URL4, 
         {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
-        console.log("connected to twcrcpt");
+        console.log("connected to changepoints");
 
         // just read one collection
-        mongoose.connection.db.collection("twcrCpt", function(err, collection){
+        mongoose.connection.db.collection("twcrEra20cMergedVI", function(err, collection){
             collection.find({}).sort({tg : 1}).toArray( function(err, data) {
                 // console.log(data);
                 let tgNames = [];
@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
                     tgNames.push(tg.tg)
                 }
 
-                res.render('twcrCpt', {tgNames})
+                res.render('cpt', {tgNames})
             })
 
             
@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
         
     })
     .catch(error => {
-        console.log("error connecting to twcrcpt", error);
+        console.log("error connecting to changepoints", error);
         })
 })
 

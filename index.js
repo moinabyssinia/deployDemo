@@ -3,15 +3,18 @@ const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
+const bodyParser = require('body-parser');
+
+
 const tgsAMRoute = require('./routes/tgs_AM'); // requring a route
 const tgsMZRoute = require('./routes/tgs_MZ'); // requring a route
 const homeRoute = require('./routes/home'); 
 const tgDetailRoute = require('./routes/tgDetail'); 
 const obsSurgeRoute = require('./routes/obsSurge'); 
 const searchTGRoute = require('./routes/searchTG'); 
-const twcrCptRoute = require('./routes/twcrCpt'); 
-const twcrCptDetailRoute = require('./routes/twcrCptDetail'); 
-const twcrCptDisplayRoute = require('./routes/twcrCptDisplay'); 
+const cptRoute = require('./routes/cpt'); 
+const cptDetailRoute = require('./routes/cptDetail'); 
+const cptDisplayRoute = require('./routes/cptDisplay'); 
 
 const PORT = process.env.PORT || 3000;
 
@@ -22,6 +25,7 @@ require('dotenv').config();
 
 // routes go here
 app.use(express.static("public")); // to locate css and other files
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/home', homeRoute);
 app.use('/tgsa2m', tgsAMRoute);
@@ -29,10 +33,9 @@ app.use('/tgsm2z', tgsMZRoute);
 app.use('/tgDetail', tgDetailRoute);
 app.use('/tgDetail/obs_surge', obsSurgeRoute);
 app.use('/search', searchTGRoute);
-app.use('/twcrcpt', twcrCptRoute);
-app.use('/twcrcpt/twcr', twcrCptDetailRoute);
-app.use('/cptplot', twcrCptDisplayRoute);
-
+app.use('/cpt', cptRoute);
+app.use('/cpt/twcr_era20c', cptDetailRoute);
+app.use('/cptplot', cptDisplayRoute);
 
 app.engine('ejs', ejsMate); 
 app.set('views', path.join(__dirname, 'views'));

@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %> 
+
+<h1><strong><%= data[0].tg.split('.csv')[0] %></strong></h1>
+
+
+<div class="map-container d-flex flex">
+
+    <div class="map-table">
+    
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><%= data[0].tg.split('.csv')[0] %></td>
+            </tr>
+
+            <tr>
+                <td>20-CR Changepoint Year</td>
+                <td><%= data[0].viTwcr %></td>
+            </tr>
+
+            <tr>
+                <td>ERA-20C Changepoint Year</td>
+                <td><%= data[0].viEra20c %></td>
+            </tr>
+
+            <tr>
+                <td>20-CR Changepoint Analysis Plots</td>
+                <td><a href="/cptplot/tg/<%= data[0].tg %>.jpg/reanalysis/twcr" target="_blank">view</a></td>
+            </tr>
+
+            <tr>
+                <td>ERA-20C Changepoint Analysis Plots</td>
+                <td><a href="/cptplot/tg/<%= data[0].tg %>.jpg/reanalysis/era20c" target="_blank">view</a></td>
+            </tr>
+
+            <tr>
+                <td>20-CR Reconstruction [after changepoint]</td>
+                <td><a href="#" target="_blank">coming soon ...</a></td>
+            </tr>
+
+            <tr>
+                <td>ERA-20C Reconstruction [after changepoint]</td>
+                <td><a href="#" target="_blank">coming soon ...</a></td>
+            </tr>
+
+        </table>    
+    </div>
+
+</div>

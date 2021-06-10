@@ -1,0 +1,16 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="heading">
+    <h1><strong>Changepoints Analysis Results for Centennial Surge Reconstructions (20-CR + ERA-20C)</strong></h1>
+
+    <h5><strong><%= tgNames.length %></strong> tide gauges found </h5>
+</div>
+
+
+<% for (let tg of tgNames.sort()) { %> 
+
+    <ul>
+        <li><a href="/cpt/twcr_era20c/<%= tg.split('.csv')[0] %> "><%= tg.split('.csv')[0] %> </li></a> 
+    </ul>
+
+<% } %> 
