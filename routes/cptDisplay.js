@@ -7,7 +7,8 @@ router.get('/tg/:tgName/reanalysis/:reanalysisName', (req, res) => {
     reanalysisName = req.params.reanalysisName;
 
     const cptUrl = {"twcr" : process.env.twcrCptUrl,
-                  "era20c" : process.env.era20cCptUrl}
+                  "era20c" : process.env.era20cCptUrl,
+                  "both" : process.env.twcrEra20cUrl}
     
 
     const imageUrl = cptUrl[reanalysisName] + tgName;
