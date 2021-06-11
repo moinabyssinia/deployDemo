@@ -1,13 +1,21 @@
 <% layout('layouts/boilerplate') %> 
 
 <div class="top-element">
-    <h2> <%= data[0].name %> </h2>
+    <div class="row">
+        <div class = "col-lg-6 col-md-12 col-sm-12">
+            <h2> <%= data[0].name %> </h2>
+        </div>
 
-    <form action="/search" method="get">
-        <label for="name">Tide Gauge Name</label>
-        <input type="text" name="name" id = "name" placeholder="eg. cuxhaven">
-        <button type="submit">Search</button>
-    </form>
+        <div class = "col-lg-6 col-md-12 col-sm-12">
+            <form action="/search" method="get">
+                <label for="name">Tide Gauge Name</label>
+                <input type="text" name="name" id = "name" placeholder="eg. cuxhaven">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+    </div>
+
 </div>
 
 

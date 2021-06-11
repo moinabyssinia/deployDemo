@@ -181,7 +181,7 @@ hr:after {
 #mapid { 
     height: 20rem; 
     width: 30rem;
-    margin: 20px auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .row {
@@ -194,6 +194,11 @@ hr:after {
 
 
 /* tgDetail styles */
+
+.top-element .row {
+    width: 100%;
+}
+
 .map-table {
     margin: auto;
 }
@@ -203,6 +208,12 @@ hr:after {
 .row {
     align-items: center;
 }
+
+.map-container .row {
+    display: flex;
+    vertical-align: top;
+}
+
 .tgDetail {
     margin: 20px auto 0 auto;
 }
@@ -214,10 +225,11 @@ hr:after {
     flex-direction: row;
     justify-content: space-between;
 }
-
+.top-element h2 {
+    text-align: center;
+}
 .top-element form {
-    margin-top: 20px;
-    margin-bottom: 15px;
+    text-align: center;
     padding-top: 0;
 }
 
