@@ -224,6 +224,7 @@ hr:after {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 .top-element h2 {
     text-align: center;
