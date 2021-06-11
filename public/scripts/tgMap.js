@@ -39,3 +39,4 @@ const redIcon = new L.Icon({
   
 
 L.marker([Number(lat.textContent), Number(lon.textContent)], {icon: redIcon}).addTo(map);
+

@@ -74,16 +74,12 @@ h2 {
 /* mobile devices */
 @media only screen 
   and (min-device-width: 360px) 
-  and (max-device-width: 768px) {
+  and (max-device-width: 1000px) {
 
-    .main-title {
-        width: 80%;
-        padding: 0.5rem;
-        margin: 1.5rem auto 1.5rem auto;
+    .map-container {
+        flex-direction:column;
     }
 }
-
-
 
 h4 a {
     text-decoration: none;
@@ -185,18 +181,34 @@ hr:after {
 #mapid { 
     height: 20rem; 
     width: 30rem;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
 }
 
-.map-container {
+.row {
     justify-content: space-between;
 }
+
 
 
 /* footer */
 
 
 /* tgDetail styles */
+.map-table {
+    margin: auto;
+}
+/* .tgDetail .label {
+    width: 400px;
+} */
+.row {
+    align-items: center;
+}
+.tgDetail {
+    margin: 20px auto 0 auto;
+}
+.container {
+    width: 100%;
+}
 .top-element {
     display: flex;
     flex-direction: row;
