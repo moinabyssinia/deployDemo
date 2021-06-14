@@ -25,6 +25,7 @@ router.get('/:tgName', (req, res) => {
 
                 const cptUrl = process.env.twcrCptUrl;
 
+                res.locals.title = `Changepoint | ${tg.tgName}`
                 res.render('cptDetail', { data, cptUrl });
             })
 

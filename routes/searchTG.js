@@ -39,6 +39,7 @@ router.get('/', (req, res) => {
             console.log('found results are: ');
             console.log(tgNames.toString());
 
+            res.locals.title = "Search Results";
             res.render('search', { tgNames });
 
             mongoose.connection.close();

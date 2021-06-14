@@ -14,7 +14,8 @@ router.get('/tg/:tgName/reanalysis/:reanalysisName', (req, res) => {
     const imageUrl = cptUrl[reanalysisName] + tgName;
 
     // console.log(cptUrl[reanalysisName]);
-
+    
+    res.locals.title = `${reanalysisName} CPT Plot | ${tgName}`
     res.render('cptPlot', { imageUrl })
 })
 

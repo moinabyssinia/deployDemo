@@ -23,6 +23,7 @@ router.get('/', (req, res) => {
                 tgNames.push(tgName.name)
             }
 
+            res.locals.title = "Tide Gauges (M-Z)";
             res.render('alltgs', { tgNames, tgTitle });
             mongoose.connection.close();
         });

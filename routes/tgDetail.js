@@ -22,6 +22,7 @@ router.get('/:tg', (req, res) => {
             collection.find({name : tgName}).toArray(function(err, data){
                 // console.log(data); // it will print your collection data
 
+                res.locals.title = id.tg;   
                 res.render('tgDetail', {data});
 
                 mongoose.connection.close();

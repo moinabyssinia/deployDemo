@@ -22,7 +22,8 @@ router.get('/', (req, res) => {
                     tgNames.push(tg.tg)
                 }
 
-                res.render('cpt', {tgNames})
+                res.locals.title = "Changepoint Analysis";
+                res.render('cpt', {tgNames});
             })
 
             
