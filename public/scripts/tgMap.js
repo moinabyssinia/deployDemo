@@ -9,13 +9,13 @@ const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWljaGFlbGd0YWRlc3NlIiwiYSI6ImNrcGI5ZnBwNjA0OHYydnIzcTk0N3c0em0ifQ.jbKBBNxF3jk2KFDQ1GSq3A';
 
-const streets   = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', attribution: mbAttr}),
+const streets   = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', attribution: mbAttr, tileSize: 512, zoomOffset: -1}),
       satellite  = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', attribution: mbAttr})
 
 
 const map = L.map('mapid', {
     center: [Number(lat.textContent), Number(lon.textContent)],
-    zoom: 5,
+    zoom: 3.75,
     layers: [streets] // one of the layers needs to be default
 });
 

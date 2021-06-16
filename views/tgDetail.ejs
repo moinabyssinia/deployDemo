@@ -32,11 +32,11 @@
             
                 <table class="tgDetail">
                     <tr>
-                        <td class = "label">Name</td>
-                        <td><%= data[0].name %></td>
+                        <td class = "label"><strong>Name</strong></td>
+                        <td><strong><%= data[0].name %></strong></td>
                     </tr>
 
-                    <tr>
+                    <tr class = "alt">
                         <td class = "label">Longitude</td>
                         <td class="lon"><%= data[0].lon %></td>
                     </tr>
@@ -46,7 +46,7 @@
                         <td class="lat"><%= data[0].lat %></td>
                     </tr>
 
-                    <tr>
+                    <tr class = "alt">
                         <td class = "label">Country</td>
                         <td><%= data[0].country %></td>
                     </tr>
@@ -56,7 +56,7 @@
                         <td><a href="http://maps.google.com/maps?z=12&t=k&q=<%= data[0].lat %> ,<%= data[0].lon %>" target="_blank">view map</a></td>
                     </tr>
 
-                    <tr>
+                    <tr class = "alt">
                         <td class = "label">Observed Daily Max Surge</td>
                         <td><a href="/tgDetail/obs_surge/<%= data[0].name %>" target="_blank">obs surge</a></td>
                     </tr>
@@ -67,7 +67,7 @@
                             href="https://github.com/moinabyssinia/gssr-webmap/blob/gh-pages/20cr/<%= data[0].name %>.7z?raw=true" target="_blank">download</a></td>
                     </tr>
 
-                    <tr>
+                    <tr class = "alt">
                         <td class = "label">ERA 20C Surge Reconstruction</td>
                         <td><a href="https://github.com/moinabyssinia/gssr-webmap/blob/gh-pages/era20c/<%= data[0].name %>.7z?raw=true" target="_blank">download</a></td>
                     </tr>
@@ -77,7 +77,7 @@
                         <td><a href="https://github.com/moinabyssinia/gssr-webmap/blob/gh-pages/eraint/<%= data[0].name %>.7z?raw=true" target="_blank">download</a></td>
                     </tr>
 
-                    <tr>
+                    <tr class = "alt">
                         <td class = "label">ERA5 Surge Reconstruction</td>
                         <td><a href="https://github.com/moinabyssinia/gssr-webmap/blob/gh-pages/erafive/<%= data[0].name %>.7z?raw=true" target="_blank">download</a></td>
                     </tr>
@@ -87,7 +87,7 @@
                         <td><a href="https://github.com/moinabyssinia/gssr-webmap/blob/gh-pages/merra/<%= data[0].name %>.7z?raw=true" target="_blank">download</a></td>
                     </tr>
 
-                    <tr>
+                    <tr class = "alt">
                         <td class = "label">Changepoint Analysis</td>
                         <td><a href="" target="_blank" style = "pointer-events: none; color: gray; text-decoration: none;">coming soon </a></td>
                     </tr>
@@ -96,7 +96,7 @@
                         <td class = "label">Trend Analysis</td>
                         <td><a href="" target="_blank" style = "pointer-events: none; color: gray; text-decoration: none;">coming soon </a></td>
                     </tr>
-                    <tr>
+                    <tr class = "alt">
                         <td class = "label">Extreme Value Analysis</td>
                         <td><a href="" target="_blank" style = "pointer-events: none; color: gray; text-decoration: none;">coming soon </a></td>
                     </tr>

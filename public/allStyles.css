@@ -6,6 +6,14 @@ table, td {
 td {
     padding: 5px 10px;
 }
+/* 
+th {
+    background-color: rgb(67, 67, 231) !important;
+} */
+
+.alt {
+    background-color: rgb(216, 211, 211);
+}
 
 table {
     margin-top: 20px;
@@ -202,9 +210,7 @@ hr:after {
 .map-table {
     margin: auto;
 }
-/* .tgDetail .label {
-    width: 400px;
-} */
+
 .row {
     align-items: center;
 }
