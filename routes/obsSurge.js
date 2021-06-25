@@ -27,7 +27,8 @@ router.get('/:tg', (req, res) => {
         mongoose.connection.db.collection(tgName, function (err, collection){
             collection.find({}).sort({date : 1}).toArray(function(err, data){
                 // console.log(data); // it will print your collection data
-
+                
+                res.locals.title = `${tgName} | Observed Surge`;
                 res.render('obsSurge', { data, tgName });
 
                 mongoose.connection.close();
