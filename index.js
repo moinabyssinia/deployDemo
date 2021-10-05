@@ -4,7 +4,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const bodyParser = require('body-parser');
-
+const {MongoClient} = require('mongodb');
 
 const tgsAMRoute = require('./routes/tgs_AM'); // requring a route
 const tgsMZRoute = require('./routes/tgs_MZ'); // requring a route
@@ -15,6 +15,7 @@ const searchTGRoute = require('./routes/searchTG');
 const cptRoute = require('./routes/cpt'); 
 const cptDetailRoute = require('./routes/cptDetail'); 
 const cptDisplayRoute = require('./routes/cptDisplay'); 
+const cpttwcrera20c = require('./routes/cptpage'); 
 
 const PORT = process.env.PORT || 3000;
 
@@ -36,6 +37,7 @@ app.use('/search', searchTGRoute);
 app.use('/cpt', cptRoute);
 app.use('/cpt/twcr_era20c', cptDetailRoute);
 app.use('/cptplot', cptDisplayRoute);
+app.use('/cptpage', cpttwcrera20c);
 
 app.engine('ejs', ejsMate); 
 app.set('views', path.join(__dirname, 'views'));
