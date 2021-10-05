@@ -1,8 +1,4 @@
 {
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": "<=5.0.0"
-  },
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
