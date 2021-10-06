@@ -275,3 +275,21 @@ hr:after {
     width: 80%;
     height: auto;
 }
+
+/* cpt map styles */
+.leaflet-control-zoom-out {
+    visibility: hidden;
+}
+.leaflet-control-zoom-in {
+    visibility: hidden;
+}
+.leaflet-control{
+    border: none !important;
+}
+
+.gin-control-zoom-in{
+    font-size: 20px;
+}
+.gin-control-zoom-out{
+    font-size: 20px;
+}
