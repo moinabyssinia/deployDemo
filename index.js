@@ -37,7 +37,7 @@ app.use('/search', searchTGRoute);
 app.use('/cpt', cptRoute);
 app.use('/cpt/twcr_era20c', cptDetailRoute);
 app.use('/cptplot', cptDisplayRoute);
-app.use('/cptpage', cpttwcrera20c);
+app.use('/changepoint', cpttwcrera20c);
 
 app.engine('ejs', ejsMate); 
 app.set('views', path.join(__dirname, 'views'));
