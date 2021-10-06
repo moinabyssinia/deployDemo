@@ -45,8 +45,9 @@ h3 {
 
 h2 {
     /* background-color: rgb(24, 26, 21); */
-    margin-top: 10px;
-    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
     padding-top: 0;
 }
 
@@ -186,10 +187,13 @@ hr:after {
 }
 
 /* leaflet map for tige gauge */
+.container {
+    width: 80% !important;
+}
 #mapid { 
     height: 40rem; 
-    width: 90rem;
-    margin: 60px auto 0 auto;
+    width: 80rem;
+    margin: 30px auto 0 auto;
 }
 
 .row {
