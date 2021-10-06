@@ -1,8 +1,4 @@
-{"name":"gssrDB",
-  "engines": {
-    "node": "14.18.0"
-  }
-  ,
+{
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
@@ -17,10 +13,14 @@
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
     "got": "^8.3.2",
-    "heroku": "^7.59.0",
+    "heroku": "^7.54.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.9",
     "nodemon": "^2.0.13",
     "phoenix": "^1.6.0"
-  }
+  },
+  "engines": {
+    "node": "14.18.0",
+    "npm": "7.6.3"
+    }
 }
