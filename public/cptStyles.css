@@ -265,3 +265,13 @@ hr:after {
     height: auto;
     margin-top: 15px;
  }
+
+
+ /* cpt image style */
+.fig img {
+    display: block;
+    margin: 60px auto 20px auto;
+    object-fit: cover;
+    width: 80%;
+    height: auto;
+}
