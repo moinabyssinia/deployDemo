@@ -1,6 +1,6 @@
 
 /* get link for the geojson file */
-const cptGeoJson = "https://raw.githubusercontent.com/moinabyssinia/gssrDB/main/public/data/twcr_era20c_cpt.geojson"
+const trendsGeoJson = "https://raw.githubusercontent.com/moinabyssinia/gssrDB/main/public/data/allTrends.geojson"
 
 // adding layer definition
 const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -121,7 +121,7 @@ zoomHome.addTo(map);
 
 /* fetching data from geojson file */  
 
-fetch(cptGeoJson)
+fetch(trendsGeoJson)
     .then(
         res => res.json()
     )
