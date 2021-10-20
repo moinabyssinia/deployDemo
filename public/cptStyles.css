@@ -1,3 +1,8 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 2;
+}
 table, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -275,6 +280,14 @@ hr:after {
     width: 80%;
     height: auto;
 }
+
+/* cpt text styling */
+.text p {
+    padding: 10px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif'; */
+    text-align: justify;
+}
+
 
 /* cpt map styles */
 .leaflet-control-zoom-out {
