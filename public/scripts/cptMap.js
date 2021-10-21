@@ -139,7 +139,7 @@ fetch(cptGeoJson)
                     "</tr>" +
 
                     "<tr>" +
-                        "<td>Observation Length</td>" +
+                        "<td>Observation Length (yr)</td>" +
                         `<td>${feature.properties.obsRecordLength_x}</td>` +
                     "</tr>" +
 
@@ -149,12 +149,12 @@ fetch(cptGeoJson)
                     "</tr>" +
 
                     "<tr>" +
-                        "<td>G-E20C length</td>" +
+                        "<td>G-E20C length (yr)</td>" +
                         `<td>${feature.properties.era20c_recLen}</td>` +
                     "</tr>" +
 
                     "<tr>" +
-                        "<td>G-E20C extension</td>" +
+                        "<td>G-E20C extension (yr)</td>" +
                         `<td>${feature.properties.era20c_yrsGained}</td>` +
                     "</tr>" +
 
@@ -164,12 +164,12 @@ fetch(cptGeoJson)
                     "</tr>" +
 
                     "<tr>" +
-                        "<td>G-20CR length" +
+                        "<td>G-20CR length (yr)" +
                         `<td>${feature.properties.twcr_recLen}</td>` +
                     "</tr>" +
 
                     "<tr>" +
-                        "<td>G-20CR extension" +
+                        "<td>G-20CR extension (yr)" +
                         `<td>${feature.properties.twcr_yrsGained}</td>` +
                     "</tr>" +
 
