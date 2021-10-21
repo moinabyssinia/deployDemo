@@ -31,8 +31,8 @@ const baseLayers = {
 L.control.layers(baseLayers).addTo(map);
 
 const icon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/moinabyssinia/gssr/gh-pages/circle-48.png',
-    iconSize: [15, 15]
+    iconUrl: '../icons/circle.png',
+    iconSize: [10, 10]
   });
   
 
@@ -131,16 +131,52 @@ fetch(cptGeoJson)
                 const marker = L.marker(latlng, {icon: icon})
 
                 // define popup text
-                let popupText = `Tide Gauge: ${feature.properties.tg}` + `<br>`
-                popupText += `observation length: ${feature.properties.obsRecordLength_x}` + `<br>`
-                popupText += `gssrERA20C CPT: ${feature.properties.era20c_vi}` + `<br>`
-                popupText += `gssrERA20C length: ${feature.properties.era20c_recLen}` + `<br>`
-                popupText += `gssrERA20C extention: ${feature.properties.era20c_yrsGained}` + `<br>`
-                popupText += `gssr20CR CPT: ${feature.properties.twcr_vi}` + `<br>`
-                popupText += `gssr20CR length: ${feature.properties.twcr_recLen}` + `<br>`
-                popupText += `gssr20CR extention: ${feature.properties.twcr_yrsGained}` + `<br>`
+                let popupText = 
+                "<table>" +
+                    "<tr>" +
+                        "<td>Tide Gauge</td>" +
+                        `<td>${feature.properties.tg}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>Observation Length</td>" +
+                        `<td>${feature.properties.obsRecordLength_x}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-E20C CPT</td>" +
+                        `<td>${feature.properties.era20c_vi}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-E20C length</td>" +
+                        `<td>${feature.properties.era20c_recLen}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-E20C extension</td>" +
+                        `<td>${feature.properties.era20c_yrsGained}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR CPT</td>" +
+                        `<td>${feature.properties.twcr_vi}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR length" +
+                        `<td>${feature.properties.twcr_recLen}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR extension" +
+                        `<td>${feature.properties.twcr_yrsGained}</td>` +
+                    "</tr>" +
+
+                "</table>" 
                 
-                // add popup 
+                
+                // // add popup 
                 marker.bindPopup(popupText)
 
                 return marker;
