@@ -140,7 +140,7 @@ fetch(trendsGeoJson)
 
                     "<tr>" +
                         "<td>G-E20C-95 [1900-2010]</td>" +
-                        `<td>${feature.properties.e95_1900 === null ? 'NaN' : Number(feature.properties.e95_1900).toFixed(3) + 'mm/yr'}</td>` +
+                        `<td>${feature.properties.e95_1900 === null ? 'NaN' : Number(feature.properties.e95_1900).toFixed(3) + ' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
