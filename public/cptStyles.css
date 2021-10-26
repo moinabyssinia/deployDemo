@@ -311,3 +311,8 @@ figcaption {
 .gin-control-zoom-out{
     font-size: 20px;
 }
+
+/* map styles */
+td {
+    font-size: 10px;
+}

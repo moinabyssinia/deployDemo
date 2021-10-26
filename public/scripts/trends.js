@@ -31,8 +31,8 @@ const baseLayers = {
 L.control.layers(baseLayers).addTo(map);
 
 const icon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/moinabyssinia/gssr/gh-pages/circle-48.png',
-    iconSize: [15, 15]
+    iconUrl: '../icons/trends-circle.png',
+    iconSize: [10, 10]
   });
   
 
@@ -129,20 +129,67 @@ fetch(trendsGeoJson)
         data => L.geoJSON(data, {
             pointToLayer: function(feature, latlng){
                 const marker = L.marker(latlng, {icon: icon})
-
-                // define popup text
-                let popupText = `Tide Gauge: ${feature.properties.tg}` + `<br>`
-                popupText += `e95_1900: ${feature.properties.e95_1900}` + `<br>`
-                popupText += `e99_1900: ${feature.properties.e99_1900}` + `<br>`
-                popupText += `e95_1950: ${feature.properties.e95_1950}` + `<br>`
-                popupText += `e99_1950: ${feature.properties.e99_1950}` + `<br>`
-                popupText += `t95_1875: ${feature.properties.t95_1875}` + `<br>`
-                popupText += `t99_1875: ${feature.properties.t99_1875}` + `<br>`
-                popupText += `t95_1900: ${feature.properties.t95_1900}` + `<br>`
-                popupText += `t99_1900: ${feature.properties.t99_1900}` + `<br>`
-                popupText += `t95_1950: ${feature.properties.t95_1950}` + `<br>`
-                popupText += `t99_1950: ${feature.properties.t99_1950}` + `<br>`
                 
+                // define popup text
+                let popupText = 
+                "<table>" +
+                    "<tr>" +
+                        "<td>Tide Gauge</td>" +
+                        `<td>${feature.properties.tg}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-E20C-95 [1900-2010]</td>" +
+                        `<td>${Number(feature.properties.e95_1900).toFixed(2)} mm/year</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-E20C-99 [1900-2010]</td>" +
+                        `<td>${feature.properties.e99_1900 === null ? 'NaN' : Number(feature.properties.e99_1900).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-E20C-95 [1950-2010]</td>" +
+                        `<td>${feature.properties.e95_1950 === null ? 'NaN' : Number(feature.properties.e95_1950).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-E20C-99 [1950-2010]</td>" +
+                        `<td>${feature.properties.e99_1950 === null ? 'NaN' : Number(feature.properties.e99_1950).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR-95 [1875-2015]</td>" +
+                        `<td>${feature.properties.t95_1875 === null ? 'NaN' : Number(feature.properties.t95_1875).toFixed(3) + ' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR-99 [1875-2015]</td>" +
+                        `<td>${feature.properties.t99_1875 === null ? 'NaN' : Number(feature.properties.t99_1875).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR-95 [1900-2015]</td>" +
+                        `<td>${feature.properties.t95_1900 === null ? 'NaN' : Number(feature.properties.t95_1900).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR-99 [1900-2015]</td>" +
+                        `<td>${feature.properties.t99_1900 === null ? 'NaN' : Number(feature.properties.t99_1900).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR-95 [1950-2015]</td>" +
+                        `<td>${feature.properties.t95_1950 === null ? 'NaN' : Number(feature.properties.t95_1950).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                    "<tr>" +
+                        "<td>G-20CR-99 [1950-2015]</td>" +
+                        `<td>${feature.properties.t99_1950 === null ? 'NaN' : Number(feature.properties.t99_1950).toFixed(3)+' mm/year'}</td>` +
+                    "</tr>" +
+
+                "</table>"
+
                 // add popup 
                 marker.bindPopup(popupText)
 

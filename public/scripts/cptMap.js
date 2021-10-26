@@ -164,12 +164,12 @@ fetch(cptGeoJson)
                     "</tr>" +
 
                     "<tr>" +
-                        "<td>G-20CR length (yr)" +
+                        "<td>G-20CR length (yr)</td>" +
                         `<td>${feature.properties.twcr_recLen}</td>` +
                     "</tr>" +
 
                     "<tr>" +
-                        "<td>G-20CR extension (yr)" +
+                        "<td>G-20CR extension (yr)</td>" +
                         `<td>${feature.properties.twcr_yrsGained}</td>` +
                     "</tr>" +
 
