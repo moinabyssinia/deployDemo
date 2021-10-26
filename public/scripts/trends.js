@@ -140,52 +140,52 @@ fetch(trendsGeoJson)
 
                     "<tr>" +
                         "<td>G-E20C-95 [1900-2010]</td>" +
-                        `<td>${Number(feature.properties.e95_1900).toFixed(2)} mm/year</td>` +
+                        `<td>${feature.properties.e95_1900 === null ? 'NaN' : Number(feature.properties.e95_1900).toFixed(3) + 'mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-E20C-99 [1900-2010]</td>" +
-                        `<td>${feature.properties.e99_1900 === null ? 'NaN' : Number(feature.properties.e99_1900).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.e99_1900 === null ? 'NaN' : Number(feature.properties.e99_1900).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-E20C-95 [1950-2010]</td>" +
-                        `<td>${feature.properties.e95_1950 === null ? 'NaN' : Number(feature.properties.e95_1950).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.e95_1950 === null ? 'NaN' : Number(feature.properties.e95_1950).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-E20C-99 [1950-2010]</td>" +
-                        `<td>${feature.properties.e99_1950 === null ? 'NaN' : Number(feature.properties.e99_1950).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.e99_1950 === null ? 'NaN' : Number(feature.properties.e99_1950).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-20CR-95 [1875-2015]</td>" +
-                        `<td>${feature.properties.t95_1875 === null ? 'NaN' : Number(feature.properties.t95_1875).toFixed(3) + ' mm/year'}</td>` +
+                        `<td>${feature.properties.t95_1875 === null ? 'NaN' : Number(feature.properties.t95_1875).toFixed(3) + ' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-20CR-99 [1875-2015]</td>" +
-                        `<td>${feature.properties.t99_1875 === null ? 'NaN' : Number(feature.properties.t99_1875).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.t99_1875 === null ? 'NaN' : Number(feature.properties.t99_1875).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-20CR-95 [1900-2015]</td>" +
-                        `<td>${feature.properties.t95_1900 === null ? 'NaN' : Number(feature.properties.t95_1900).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.t95_1900 === null ? 'NaN' : Number(feature.properties.t95_1900).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-20CR-99 [1900-2015]</td>" +
-                        `<td>${feature.properties.t99_1900 === null ? 'NaN' : Number(feature.properties.t99_1900).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.t99_1900 === null ? 'NaN' : Number(feature.properties.t99_1900).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-20CR-95 [1950-2015]</td>" +
-                        `<td>${feature.properties.t95_1950 === null ? 'NaN' : Number(feature.properties.t95_1950).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.t95_1950 === null ? 'NaN' : Number(feature.properties.t95_1950).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                     "<tr>" +
                         "<td>G-20CR-99 [1950-2015]</td>" +
-                        `<td>${feature.properties.t99_1950 === null ? 'NaN' : Number(feature.properties.t99_1950).toFixed(3)+' mm/year'}</td>` +
+                        `<td>${feature.properties.t99_1950 === null ? 'NaN' : Number(feature.properties.t99_1950).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                 "</table>"
