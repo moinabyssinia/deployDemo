@@ -191,7 +191,7 @@ fetch(trendsGeoJson)
                 "</table>"
 
                 // add popup 
-                marker.bindPopup(popupText)
+                marker.bindPopup(popupText, {maxWidth: 500})
 
                 return marker;
             }
