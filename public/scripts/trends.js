@@ -178,7 +178,11 @@ fetch(trendsGeoJson)
                                     : Number(feature.properties.t99_1950).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
-                "</table>"
+                "</table>" + 
+               
+                "<p style = 'color : blue'>" +
+                    '* significant trends at 5% level'+
+                "</p>"
 
                 // add popup 
                 marker.bindPopup(popupText, {maxWidth: 500})
