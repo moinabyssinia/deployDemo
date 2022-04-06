@@ -2,23 +2,11 @@
 
 <h2><%= tgName %> </h2>
 <h3>Observation - Daily Maximum Surge</h3>
-<button onclick="exportTableToCSV('<%= tgName %>.csv')">Download CSV</button>
-<table>
-    <tr>
-        <td class="header"><strong>Date</strong></td>
-        <td class="header"><strong>Surge (m)</strong></td>
-    </tr>
+<!-- <button onclick="exportTableToCSV('<%= tgName %>.csv')">Download CSV</button> -->
 
-    <% for (let item of data) { %> 
-        <% if (item.date !== 'date') { %> 
-            <tr>
-                <td><%= item.date %> </td>
-                <td><%= Math.floor(item.surge*10000)/10000 %> </td>
-            </tr>
-        <% } %> 
+<div class="container">
+    <div id="chart"></div>
+</div>
 
-    <% } %> 
 
-    <script src = "/scripts/obsSurgeScript.js"></script>
 
-</table>

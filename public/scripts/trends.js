@@ -1,6 +1,6 @@
 
 /* get link for the geojson file */
-const trendsGeoJson = "https://raw.githubusercontent.com/moinabyssinia/gssrDB/main/public/data/allTrends.geojson"
+const trendsGeoJson = "https://raw.githubusercontent.com/moinabyssinia/gssr/gh-pages/metadata/trends/allTrends_v4.geojson"
 
 // adding layer definition
 const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -133,59 +133,49 @@ fetch(trendsGeoJson)
                 // define popup text
                 let popupText = 
                 "<table>" +
-                    "<tr>" +
-                        "<td>Tide Gauge</td>" +
-                        `<td>${feature.properties.tg}</td>` +
+                    "<tr bgcolor = '#C5C5C5'>" +
+                        "<td><strong>Tide Gauge</strong></td>" +
+                        `<td><strong>${feature.properties.tg}</strong></td>` +
                     "</tr>" +
 
+                    // G-E20C 1930 trends
                     "<tr>" +
-                        "<td>G-E20C-95 [1900-2010]</td>" +
-                        `<td>${feature.properties.e95_1900 === null ? 'NaN' : Number(feature.properties.e95_1900).toFixed(3) + ' mm/yr'}</td>` +
+                        "<td>G-E20C [1930-2010]</td>" +
+                        `<td>${feature.properties.e99_1930_sigf === "TRUE" ? 
+                                Number(feature.properties.e99_1930).toFixed(3)+' mm/yr*'
+                                : feature.properties.e99_1930 === null ?
+                                    "NaN"
+                                    : Number(feature.properties.e99_1930).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
+                    // G-E20C 1950 trends
                     "<tr>" +
-                        "<td>G-E20C-99 [1900-2010]</td>" +
-                        `<td>${feature.properties.e99_1900 === null ? 'NaN' : Number(feature.properties.e99_1900).toFixed(3)+' mm/yr'}</td>` +
+                        "<td>G-E20C [1950-2010]</td>" +
+                        `<td>${feature.properties.e99_1950_sigf === "TRUE" ? 
+                            Number(feature.properties.e99_1950).toFixed(3)+' mm/yr*' 
+                                : feature.properties.e99_1950 === null ?
+                                    "NaN"
+                                    : Number(feature.properties.e99_1950).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
+                    // G-20CR 1930 trends
                     "<tr>" +
-                        "<td>G-E20C-95 [1950-2010]</td>" +
-                        `<td>${feature.properties.e95_1950 === null ? 'NaN' : Number(feature.properties.e95_1950).toFixed(3)+' mm/yr'}</td>` +
+                        "<td>G-20CR [1930-2015]</td>" +
+                        `<td>${feature.properties.t99_1930_sigf === "TRUE" ? 
+                            Number(feature.properties.t99_1930).toFixed(3)+' mm/yr*' 
+                                : feature.properties.t99_1930 === null ?
+                                    "NaN" 
+                                    : Number(feature.properties.t99_1930).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
+                    // G-20CR 1950 trends
                     "<tr>" +
-                        "<td>G-E20C-99 [1950-2010]</td>" +
-                        `<td>${feature.properties.e99_1950 === null ? 'NaN' : Number(feature.properties.e99_1950).toFixed(3)+' mm/yr'}</td>` +
-                    "</tr>" +
-
-                    "<tr>" +
-                        "<td>G-20CR-95 [1875-2015]</td>" +
-                        `<td>${feature.properties.t95_1875 === null ? 'NaN' : Number(feature.properties.t95_1875).toFixed(3) + ' mm/yr'}</td>` +
-                    "</tr>" +
-
-                    "<tr>" +
-                        "<td>G-20CR-99 [1875-2015]</td>" +
-                        `<td>${feature.properties.t99_1875 === null ? 'NaN' : Number(feature.properties.t99_1875).toFixed(3)+' mm/yr'}</td>` +
-                    "</tr>" +
-
-                    "<tr>" +
-                        "<td>G-20CR-95 [1900-2015]</td>" +
-                        `<td>${feature.properties.t95_1900 === null ? 'NaN' : Number(feature.properties.t95_1900).toFixed(3)+' mm/yr'}</td>` +
-                    "</tr>" +
-
-                    "<tr>" +
-                        "<td>G-20CR-99 [1900-2015]</td>" +
-                        `<td>${feature.properties.t99_1900 === null ? 'NaN' : Number(feature.properties.t99_1900).toFixed(3)+' mm/yr'}</td>` +
-                    "</tr>" +
-
-                    "<tr>" +
-                        "<td>G-20CR-95 [1950-2015]</td>" +
-                        `<td>${feature.properties.t95_1950 === null ? 'NaN' : Number(feature.properties.t95_1950).toFixed(3)+' mm/yr'}</td>` +
-                    "</tr>" +
-
-                    "<tr>" +
-                        "<td>G-20CR-99 [1950-2015]</td>" +
-                        `<td>${feature.properties.t99_1950 === null ? 'NaN' : Number(feature.properties.t99_1950).toFixed(3)+' mm/yr'}</td>` +
+                        "<td>G-20CR [1950-2015]</td>" +
+                        `<td>${feature.properties.t99_1950_sigf === "TRUE" ? 
+                            Number(feature.properties.t99_1950).toFixed(3)+' mm/yr*' 
+                                : feature.properties.t99_1950 === null ?
+                                    "NaN"
+                                    : Number(feature.properties.t99_1950).toFixed(3)+' mm/yr'}</td>` +
                     "</tr>" +
 
                 "</table>"
