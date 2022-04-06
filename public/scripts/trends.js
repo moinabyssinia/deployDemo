@@ -180,8 +180,8 @@ fetch(trendsGeoJson)
 
                 "</table>" + 
                
-                "<p style = 'color : blue'>" +
-                    '* significant trends at 5% level'+
+                "<p style = 'color : blue; margin = 0;'>" +
+                    '<em>* significant trends at 5% level</em>'+
                 "</p>"
 
                 // add popup 
