@@ -18,6 +18,8 @@ const cptDisplayRoute = require('./routes/cptDisplay');
 const cpttwcrera20c = require('./routes/cptpage'); 
 const trendstwcrera20c = require('./routes/trends'); 
 const trendsSensAnalysis = require('./routes/trendsens'); 
+const satrends = require('./routes/satrends'); 
+const freqtrends = require('./routes/freqtrends'); 
 
 const PORT = process.env.PORT || 3000;
 
@@ -42,6 +44,8 @@ app.use('/cptplot', cptDisplayRoute);
 app.use('/changepoint', cpttwcrera20c);
 app.use('/trends', trendstwcrera20c);
 app.use('/trendsens', trendsSensAnalysis);
+app.use('/satrends', satrends);
+app.use('/freqtrends', freqtrends);
 
 app.engine('ejs', ejsMate); 
 app.set('views', path.join(__dirname, 'views'));
