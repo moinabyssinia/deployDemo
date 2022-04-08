@@ -17,7 +17,7 @@
     "heroku": "^7.53.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.9",
-    "nodemon": "^2.0.13",
+    "nodemon": "^2.0.15",
     "phoenix": "^1.6.0"
   },
   "engines": {
